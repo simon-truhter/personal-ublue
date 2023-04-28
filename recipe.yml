@@ -42,7 +42,7 @@ rpms:
   - gnome-tweaks # advanced UI Theming
   - gnome-text-editor # Notepad++ for Linux
   - exa # modern ls replacement used via alias in .zshrc
-  # add your own below
+# add your own below
 # These Flatpaks (from flathub) will be available for install on boot
 # this is just an example selection.
 # If you leave this empty you can use yafti for post-boot installation
