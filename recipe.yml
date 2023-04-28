@@ -34,12 +34,30 @@ rpms:
 # These Flatpaks (from flathub) will be available for install on boot
 # this is just an example selection.
 # If you leave this empty you can use yafti for post-boot installation
-flatpaks:
-  - org.mozilla.firefox
-  - org.mozilla.Thunderbird
+flatpaks: # maybe comments behind flatpaks cause issues, but unlikely
+  - io.gitlab.librewolf-community # Hardend Firefox (UTC Timezone, english default, no DRM)
+  - io.freetubeapp.FreeTube # Youtube without Ads, Subscribe without Account
+  - org.kde.kdenlive # Video Editor
+  - org.libreoffice.LibreOffice # Openoffice 
+  - org.signal.Signal # Popular E2E Message Client
+  - org.videolan.VLC # VLC Media Player
+  - com.github.tchx84.Flatseal # Flatpak Permission Manager
+  - com.obsproject.Studio # Streaming and Recording Application
+  - com.jgraph.drawio.desktop # Visualize Charts like Networks, Controlflow of Code etc 
+  - net.cozic.joplin_desktop # Markdown Editor
+  - org.getmonero.Monero # Decentralized 
+  - org.geogebra.GeoGebra # Math visualization
+  - org.gimp.GIMP # FOSS Photoshop
+  - com.github.flxzt.rnote # Great OneNote alternative 
+  - chat.schildi.desktop # Matrix unoffical classic Messenger
+  - im.riot.Riot # Matrix Offical Messenger
+  - eu.betterbird.Betterbird # Email Client like Thunderbird
+  - com.brave.Browser # Chromium Based Browser (DRM support)
+  - org.kde.okular # PDF Viewer
+  - org.qbittorrent.qBittorrent # Torrenting Client
   - com.mattjakeman.ExtensionManager
-  - org.libreoffice.LibreOffice
-  - org.gnome.DejaDup
-  - org.gustavoperedo.FontDownloader
-  - com.github.tchx84.Flatseal
-  - io.github.celluloid_player.Celluloid
+  - tv.kodi.Kodi # Modern Media Center 
+  - org.keepassxc.KeePassXC # Encrypted local Password Manager
+  - network.loki.Session # Session Decentralized E2E Messenger
+  - com.vscodium.codium # Modern IDE - Visual Studio Code without Microsoft
+  - io.github.aandrew_me.ytdn # Youtube Video Downloader
