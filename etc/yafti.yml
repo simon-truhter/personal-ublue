@@ -1,11 +1,11 @@
-title: Welcome to uBlue
+title: Welcome to my uBlue
 properties:
   mode: "run-on-change"
 screens:
   first-screen:
     source: yafti.screen.title
     values:
-      title: "Welcome to uBlue (Alpha)"
+      title: "Welcome to my uBlue"
       icon: "/path/to/icon"
       description: |
         Pick some applications to get started
@@ -32,32 +32,32 @@ screens:
           description: Personal Choice of Apps
           default: true
           packages:
-            - io.gitlab.librewolf-community
-            - io.freetubeapp.FreeTube
-            - org.kde.kdenlive
-            - org.libreoffice.LibreOffice
-            - org.signal.Signal
-            - org.videolan.VLC
-            - com.github.tchx84.Flatseal
-            - com.obsproject.Studio
-            - com.jgraph.drawio.desktop
-            - net.cozic.joplin_desktop
-            - org.getmonero.Monero
-            - org.geogebra.GeoGebra
-            - org.gimp.GIMP
-            - com.github.flxzt.rnote
-            - chat.schildi.desktop
-            - im.riot.Riot
-            - eu.betterbird.Betterbird
-            - com.brave.Browser
-            - org.kde.okular
-            - org.qbittorrent.qBittorrent
-            - com.mattjakeman.ExtensionManager
-            - tv.kodi.Kodi
-            - org.keepassxc.KeePassXC
-            - network.loki.Session
-            - com.vscodium.codium
-            - io.github.aandrew_me.ytdn
+            - Main Browser: io.gitlab.librewolf-community
+            - Youtube: io.freetubeapp.FreeTube
+            - Video Editor: org.kde.kdenlive
+            - LibreOffice: org.libreoffice.LibreOffice
+            - Signal Messenger: org.signal.Signal
+            - Video Player: org.videolan.VLC
+            - Flatpak Permission Manager: com.github.tchx84.Flatseal
+            - Screenrecorder: com.obsproject.Studio
+            - Draw.io: com.jgraph.drawio.desktop
+            - Notetaking: net.cozic.joplin_desktop
+            - Monero: org.getmonero.Monero
+            - GeoGebra: org.geogebra.GeoGebra
+            - GIMP: org.gimp.GIMP
+            - RNote: com.github.flxzt.rnote
+            - Schildichat: chat.schildi.desktop
+            - Riot: im.riot.Riot
+            - Betterbird: eu.betterbird.Betterbird
+            - Brave: com.brave.Browser
+            - PDF Editor: org.kde.okular
+            - Torrenting Client: org.qbittorrent.qBittorrent
+            - ExtensionManager: com.mattjakeman.ExtensionManager
+            - Kodi: tv.kodi.Kodi
+            - KeePassXC: org.keepassxc.KeePassXC
+            - Session: network.loki.Session
+            - VScodium: com.vscodium.codium
+            - Video Downloader: io.github.aandrew_me.ytdn
         Core:
           description: Core Applications
           default: false
