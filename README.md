@@ -1,4 +1,4 @@
-# Starting point
+# personal-ublue
 
 [![build-ublue](https://github.com/simon-truhter/personal-ublue/actions/workflows/build.yml/badge.svg)](https://github.com/simon-truhter/personal-ublue/actions/workflows/build.yml)
 
