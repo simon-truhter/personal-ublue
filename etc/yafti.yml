@@ -35,7 +35,7 @@ screens:
             - Main Browser: io.gitlab.librewolf-community
             - Youtube: io.freetubeapp.FreeTube
             - Video Editor: org.kde.kdenlive
-            - LibreOffice: org.libreoffice.LibreOffice
+            - Libre Office: org.libreoffice.LibreOffice
             - Signal Messenger: org.signal.Signal
             - Video Player: org.videolan.VLC
             - Flatpak Permission Manager: com.github.tchx84.Flatseal

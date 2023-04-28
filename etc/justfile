@@ -22,6 +22,14 @@ distrobox-opensuse:
 distrobox-ubuntu:
   echo 'Creating Ubuntu distrobox ...'
   distrobox create --image quay.io/toolbx-images/ubuntu-toolbox:22.04 -n ubuntu -Y
+  
+distrobox-arch:
+  echo 'Creating Arch distrobox ...'
+  distrobox create --image quay.io/toolbx-images/archlinux-toolbox:latest -n arch -Y
+  
+distrobox-almalinux:
+  echo 'Creating AlmaLinux distrobox ...'
+  distrobox create --image quay.io/toolbx-images/almalinux-toolbox:latest -n almalinux -Y
 
 setup-flatpaks:
   #!/bin/bash
@@ -61,3 +69,4 @@ update:
   rpm-ostree update
   flatpak update -y
   distrobox upgrade -a
+
