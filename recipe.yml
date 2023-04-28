@@ -30,34 +30,46 @@ rpms:
   # needed for yafti (the first boot installer) (remove if you're not using yafti)
   - python3-pip
   - libadwaita # libadwaita comes with silverblue, but not with other flavors
+  - virt-manager # check if gnome-boxes is better / distrobox
+  - virt-manager-common
+  - qemu-kvm
+  - neofetch # zoomer brag and quick sysinfo
+  - zsh # advanced shell - customization in script/setup-zsh.sh
+  - openssl # check if its not preinstalled anyway - maybe bad for security if >
+  - ansible # automate setup scripts
+  - kubernetes # kubectl, kubeadm etc 
+  - gnome-extensions-app # Add more features to GNOME with extensions
+  - gnome-tweaks # advanced UI Theming
+  - gnome-text-editor # Notepad++ for Linux
+  - exa # modern ls replacement used via alias in .zshrc
   # add your own below
 # These Flatpaks (from flathub) will be available for install on boot
 # this is just an example selection.
 # If you leave this empty you can use yafti for post-boot installation
 flatpaks:
-  - io.gitlab.librewolf-community
-  - io.freetubeapp.FreeTube
-  - org.kde.kdenlive
-  - org.libreoffice.LibreOffice
-  - org.signal.Signal
-  - org.videolan.VLC
-  - com.github.tchx84.Flatseal
-  - com.obsproject.Studio
-  - com.jgraph.drawio.desktop
-  - net.cozic.joplin_desktop
-  - org.getmonero.Monero
-  - org.geogebra.GeoGebra
-  - org.gimp.GIMP
-  - com.github.flxzt.rnote
-  - chat.schildi.desktop
-  - im.riot.Riot
-  - eu.betterbird.Betterbird
-  - com.brave.Browser
-  - org.kde.okular
-  - org.qbittorrent.qBittorrent
-  - com.mattjakeman.ExtensionManager
-  - tv.kodi.Kodi
-  - org.keepassxc.KeePassXC
-  - network.loki.Session
-  - com.vscodium.codium
-  - io.github.aandrew_me.ytdn
+#  - io.gitlab.librewolf-community
+#  - io.freetubeapp.FreeTube
+#  - org.kde.kdenlive
+#  - org.libreoffice.LibreOffice
+#  - org.signal.Signal
+#  - org.videolan.VLC
+#  - com.github.tchx84.Flatseal
+#  - com.obsproject.Studio
+#  - com.jgraph.drawio.desktop
+#  - net.cozic.joplin_desktop
+#  - org.getmonero.Monero
+#  - org.geogebra.GeoGebra
+#  - org.gimp.GIMP
+#  - com.github.flxzt.rnote
+#  - chat.schildi.desktop
+#  - im.riot.Riot
+#  - eu.betterbird.Betterbird
+#  - com.brave.Browser
+#  - org.kde.okular
+#  - org.qbittorrent.qBittorrent
+#  - com.mattjakeman.ExtensionManager
+#  - tv.kodi.Kodi
+#  - org.keepassxc.KeePassXC
+#  - network.loki.Session
+#  - com.vscodium.codium
+#  - io.github.aandrew_me.ytdn

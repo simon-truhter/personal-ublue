@@ -28,9 +28,39 @@ screens:
       show_terminal: true
       package_manager: yafti.plugin.flatpak
       groups:
+        Personal:
+          description: Personal Choice of Apps
+          default: true
+          packages:
+            - io.gitlab.librewolf-community
+            - io.freetubeapp.FreeTube
+            - org.kde.kdenlive
+            - org.libreoffice.LibreOffice
+            - org.signal.Signal
+            - org.videolan.VLC
+            - com.github.tchx84.Flatseal
+            - com.obsproject.Studio
+            - com.jgraph.drawio.desktop
+            - net.cozic.joplin_desktop
+            - org.getmonero.Monero
+            - org.geogebra.GeoGebra
+            - org.gimp.GIMP
+            - com.github.flxzt.rnote
+            - chat.schildi.desktop
+            - im.riot.Riot
+            - eu.betterbird.Betterbird
+            - com.brave.Browser
+            - org.kde.okular
+            - org.qbittorrent.qBittorrent
+            - com.mattjakeman.ExtensionManager
+            - tv.kodi.Kodi
+            - org.keepassxc.KeePassXC
+            - network.loki.Session
+            - com.vscodium.codium
+            - io.github.aandrew_me.ytdn
         Core:
           description: Core Applications
-          default: true
+          default: false
           packages:
             - Backup: org.gnome.DejaDup
             - Calculator: org.gnome.Calculator
