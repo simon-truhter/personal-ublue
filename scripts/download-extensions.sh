@@ -1,7 +1,7 @@
 # todo move it again later dl into /tmp
-wget -P /usr/share/gnome-shell/extensions https://extensions.gnome.org/extension-data/appindicatorsupportrgcjonas.gmail.com.v53.shell-extension.zip 
-wget -P /usr/share/gnome-shell/extensions https://extensions.gnome.org/extension-data/custom-accent-colorsdemiskp.v6.shell-extension.zip
-wget -P /usr/share/gnome-shell/extensions https://extensions.gnome.org/extension-data/soft-brightness-plusjoelkitching.com.v1.shell-extension.zip
+wget -P /tmp https://extensions.gnome.org/extension-data/appindicatorsupportrgcjonas.gmail.com.v53.shell-extension.zip 
+wget -P /tmp https://extensions.gnome.org/extension-data/custom-accent-colorsdemiskp.v6.shell-extension.zip
+wget -P /tmp https://extensions.gnome.org/extension-data/soft-brightness-plusjoelkitching.com.v1.shell-extension.zip
 # try to work with the key instead to enable them
 #gnome-extensions install /usr/share/gnome-shell/extensions/appindicatorsupportrgcjonas.gmail.com.v53.shell-extension.zip
 #gnome-extensions install /usr/share/gnome-shell/extensions/custom-accent-colorsdemiskp.v6.shell-extension.zip
@@ -10,9 +10,15 @@ wget -P /usr/share/gnome-shell/extensions https://extensions.gnome.org/extension
 unzip /tmp/appindicatorsupportrgcjonas.gmail.com.v53.shell-extension.zip -d /usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com
 unzip /tmp/custom-accent-colorsdemiskp.v6.shell-extension.zip -d /usr/share/gnome-shell/extensions/custom-accent-colors@pantheon.io
 unzip /tmp/soft-brightness-plusjoelkitching.com.v1.shell-extension.zip -d /usr/share/gnome-shell/extensions/soft-brightness-plus@joelkitching.com
+# i dont think this method work
 echo "[org/gnome/shell]
 enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'custom-accent-colors@pantheon.io','soft-brightness-plus@joelkitching.com']" | sudo tee -a /etc/dconf/db/local.d/00-extensions
 dconf update
+# method 2
+gnome-shell-extension-tool -e appindicatorsupport@rgcjonas.gmail.com
+gnome-shell-extension-tool -e custom-accent-colors@pantheon.io
+gnome-shell-extension-tool -e soft-brightness-plus@joelkitching.com
+
 #sudo gnome-extensions install /tmp/appindicatorsupportrgcjonas.gmail.com.v53.shell-extension.zip 
 # appindicatorsupport@rgcjonas.gmail.com
 #sudo gnome-extensions install /tmp/custom-accent-colorsdemiskp.v6.shell-extension.zip
