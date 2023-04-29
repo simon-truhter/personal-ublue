@@ -32,13 +32,16 @@ screens:
           description: Personal Choice of Apps
           default: true
           packages:
-            - Main Browser: io.gitlab.librewolf-community
-            - Youtube: io.freetubeapp.FreeTube
+            - LibreWolf: io.gitlab.librewolf-community
+            - FreeTube: io.freetubeapp.FreeTube
             - Video Editor: org.kde.kdenlive
             - Signal Messenger: org.signal.Signal
             - Video Player: org.videolan.VLC
             - Flatpak Permission Manager: com.github.tchx84.Flatseal
-            - Screenrecorder: com.obsproject.Studio
+            - OBS Studio: com.obsproject.Studio
+            - VkCapture for OBS: com.obsproject.Studio.OBSVkCapture
+            - Gstreamer for OBS: com.obsproject.Studio.Plugin.Gstreamer
+            - Gstreamer VAAPI for OBS: com.obsproject.Studio.Plugin.GStreamerVaapi
             - Draw.io: com.jgraph.drawio.desktop
             - Notetaking: net.cozic.joplin_desktop
             - Monero: org.getmonero.Monero
@@ -83,46 +86,46 @@ screens:
             - Picture Viewer: org.gnome.eog
             - Font Viewer: org.gnome.font-viewer
             - Font Downloader: org.gustavoperedo.FontDownloader
-        Web Browsers:
-          description: Additional browsers to complement Firefox
-          default: false
-          packages:
-            - Brave: com.brave.Browser
-            - Google Chrome: com.google.Chrome
-            - Microsoft Edge: com.microsoft.Edge
-            - Opera: com.opera.Opera
-        Gaming:
-          description: "Rock and Stone!"
-          default: false
-          packages:
-            - Bottles: com.usebottles.bottles
-            - Discord: com.discordapp.Discord
-            - Games: org.gnome.Games
-            - Heroic Games Launcher: com.heroicgameslauncher.hgl
-            - MangoHUD: org.freedesktop.Platform.VulkanLayer.MangoHud//22.08
-            - Steam: com.valvesoftware.Steam
-            - Gamescope for Steam: com.valvesoftware.Steam.Utility.gamescope
-            - Proton Updater for Steam: net.davidotek.pupgui2
-        Office:
-          description: Bow to Capitalism
-          default: false
-          packages:
-            - LibreOffice: org.libreoffice.LibreOffice
-            - Obsidian: md.obsidian.Obsidian
-            - OnlyOffice: org.onlyoffice.desktopeditors
-            - Slack: com.slack.Slack
-            - Standard Notes: org.standardnotes.standardnotes
-            - Thunderbird Email: org.mozilla.Thunderbird
-        Streaming:
-          description: Stream to the Internet
-          default: false
-          packages:
-            - OBS Studio: com.obsproject.Studio
-            - VkCapture for OBS: com.obsproject.Studio.OBSVkCapture
-            - Gstreamer for OBS: com.obsproject.Studio.Plugin.Gstreamer
-            - Gstreamer VAAPI for OBS: com.obsproject.Studio.Plugin.GStreamerVaapi
-            - Boatswain for Streamdeck: com.feaneron.Boatswain
-
+       # Web Browsers:
+        #  description: Additional browsers to complement Firefox
+         # default: false
+         # packages:
+          #  - Brave: com.brave.Browser
+           # - Google Chrome: com.google.Chrome
+           # - Microsoft Edge: com.microsoft.Edge
+           # - Opera: com.opera.Opera
+        #Gaming:
+        #  description: "Rock and Stone!"
+        #  default: false
+        #  packages:
+        #    - Bottles: com.usebottles.bottles
+         #   - Discord: com.discordapp.Discord
+         #   - Games: org.gnome.Games
+         #   - Heroic Games Launcher: com.heroicgameslauncher.hgl
+         #   - MangoHUD: org.freedesktop.Platform.VulkanLayer.MangoHud//22.08
+         #   - Steam: com.valvesoftware.Steam
+         #   - Gamescope for Steam: com.valvesoftware.Steam.Utility.gamescope
+         #   - Proton Updater for Steam: net.davidotek.pupgui2
+      #  Office:
+       #   description: Bow to Capitalism
+        #  default: false
+         # packages:
+          #  - LibreOffice: org.libreoffice.LibreOffice
+          #  - Obsidian: md.obsidian.Obsidian
+          #  - OnlyOffice: org.onlyoffice.desktopeditors
+          #  - Slack: com.slack.Slack
+          #  - Standard Notes: org.standardnotes.standardnotes
+          #  - Thunderbird Email: org.mozilla.Thunderbird
+       # Streaming:
+       #   description: Stream to the Internet
+        #  default: false
+        #  packages:
+         #   - OBS Studio: com.obsproject.Studio
+          #  - VkCapture for OBS: com.obsproject.Studio.OBSVkCapture
+           # - Gstreamer for OBS: com.obsproject.Studio.Plugin.Gstreamer
+            #- Gstreamer VAAPI for OBS: com.obsproject.Studio.Plugin.GStreamerVaapi
+ #           - Boatswain for Streamdeck: com.feaneron.Boatswain
+#
   final-screen:
     source: yafti.screen.title
     values:
