@@ -61,32 +61,36 @@ screens:
             - VScodium: com.vscodium.codium
             - Video Downloader: io.github.aandrew_me.ytdn
             - Office: org.libreoffice.LibreOffice
-            - Texmaker: net.xm1math.Texmaker
-        Core:
-          description: Core Applications
-          default: false
-          packages:
-            - Backup: org.gnome.DejaDup
             - Calculator: org.gnome.Calculator
-            - Calendar: org.gnome.Calendar
-            - Characters: org.gnome.Characters
-            - Connections: org.gnome.Connections
-            - Contacts: org.gnome.Contacts
-            - Document Viewer: org.gnome.Evince
-            - Extensions Manager: com.mattjakeman.ExtensionManager
-            - Fedora Media Writer: org.fedoraproject.MediaWriter
-            - Mozilla Firefox: org.mozilla.firefox
-            - Flatseal Permissions Manager: com.github.tchx84.Flatseal
+           # - Calendar: org.gnome.Calendar
+            - Texmaker: net.xm1math.Texmaker
             - Logs: org.gnome.Logs
             - Maps: org.gnome.Maps
-            - Nautilus Preview: org.gnome.NautilusPreviewer
-            - Text Editor: org.gnome.TextEditor
-            - Weather: org.gnome.Weather
-            - Disk Usage Analyzer: org.gnome.baobab
-            - Clocks: org.gnome.clocks
-            - Picture Viewer: org.gnome.eog
-            - Font Viewer: org.gnome.font-viewer
-            - Font Downloader: org.gustavoperedo.FontDownloader
+#        Core:
+ #         description: Core Applications
+  #        default: false
+   #       packages:
+    #        - Backup: org.gnome.DejaDup
+     #       - Calculator: org.gnome.Calculator
+      #      - Calendar: org.gnome.Calendar
+       #     - Characters: org.gnome.Characters
+        #    - Connections: org.gnome.Connections
+         #   - Contacts: org.gnome.Contacts
+          #  - Document Viewer: org.gnome.Evince
+           # - Extensions Manager: com.mattjakeman.ExtensionManager
+           # - Fedora Media Writer: org.fedoraproject.MediaWriter
+           # - Mozilla Firefox: org.mozilla.firefox
+           # - Flatseal Permissions Manager: com.github.tchx84.Flatseal
+           # - Logs: org.gnome.Logs
+           # - Maps: org.gnome.Maps
+           # - Nautilus Preview: org.gnome.NautilusPreviewer
+           # - Text Editor: org.gnome.TextEditor
+           # - Weather: org.gnome.Weather
+           # - Disk Usage Analyzer: org.gnome.baobab
+           # - Clocks: org.gnome.clocks
+           # - Picture Viewer: org.gnome.eog
+           # - Font Viewer: org.gnome.font-viewer
+           # - Font Downloader: org.gustavoperedo.FontDownloader
        # Web Browsers:
         #  description: Additional browsers to complement Firefox
          # default: false

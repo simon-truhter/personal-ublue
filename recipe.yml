@@ -44,6 +44,9 @@ rpms:
   - gnome-tweaks # advanced UI Theming
   - gnome-text-editor # Notepad++ for Linux
   - exa # modern ls replacement used via alias in .zshrc
+  - gnome-calendar # added i dont know if integration with online accounts would word need to check on that!!!!!!!!!!
+  - gnome-online-accounts # this does not exist as flatpak
+  - gnome-weather # same as gnome-calendar
 #  - texmaker
 # add your own below
 # These Flatpaks (from flathub) will be available for install on boot
