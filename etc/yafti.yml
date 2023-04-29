@@ -29,7 +29,7 @@ screens:
         - run: sudo usermod -aG libvirt $(whoami) # later split into different screen sections
         - run: gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
         - run: gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
-        - run: gsettings set org.gnome.desktop.interface icon-theme 'Beautyline'
+        - run: gsettings set org.gnome.desktop.interface icon-theme 'beautyline'
 
   applications:
     source: yafti.screen.package

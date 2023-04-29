@@ -52,15 +52,7 @@ rpms:
 # These Flatpaks (from flathub) will be available for install on boot
 # this is just an example selection.
 # If you leave this empty you can use yafti for post-boot installation
-flatpaks:
-  - org.mozilla.firefox
-  - org.mozilla.Thunderbird
-  - com.mattjakeman.ExtensionManager
-  - org.libreoffice.LibreOffice
-  - org.gnome.DejaDup
-  - org.gustavoperedo.FontDownloader
-  - com.github.tchx84.Flatseal
-  - io.github.celluloid_player.Celluloid
+# useless section for me
 #flatpaks:
 #  - io.gitlab.librewolf-community
 #  - io.freetubeapp.FreeTube
