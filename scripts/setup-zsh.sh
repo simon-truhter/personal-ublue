@@ -1,5 +1,6 @@
-mkdir -p ~/.local/zsh/
-touch ~/.local/zsh/history
+USER=$(cat /etc/passwd | sed -n '2p' | cut -d':' -f1)
+mkdir -p /home/$USER/.local/zsh/
+touch /home/$USER/.local/zsh/history
 # should add a fixed release instead of pulling it from github
 sudo mkdir -p /usr/share/zsh/plugins/fast-syntax-highlighting/
 sudo git clone https://github.com/zdharma-continuum/fast-syntax-highlighting /usr/share/zsh/plugins/fast-syntax-highlighting/
@@ -23,7 +24,6 @@ source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.
 # Shell alias redirect commands to something else
 alias ls='exa -la'
 alias history='cat ~/.local/zsh/history'
-
 EOF
 
 
