@@ -1,6 +1,7 @@
 USER=$(cat /etc/passwd | sed -n '2p' | cut -d':' -f1)
 mkdir -p /home/$USER/.local/zsh/
 touch /home/$USER/.local/zsh/history
+chown $USER:$USER -R  /home/$USER/.local/zsh/
 # should add a fixed release instead of pulling it from github
 sudo mkdir -p /usr/share/zsh/plugins/fast-syntax-highlighting/
 sudo git clone https://github.com/zdharma-continuum/fast-syntax-highlighting /usr/share/zsh/plugins/fast-syntax-highlighting/
