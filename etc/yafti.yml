@@ -19,11 +19,8 @@ screens:
         WARNING: This will modify your Flatpaks if you are rebasing! If you do not want to do this exit the installer.
       actions:
         - run: flatpak remote-delete fedora --force
-        - run: flatpak remote-delete fedora-testing --force # added since its still present as flatpak repo
         - run: flatpak remove --system --noninteractive --all
         - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
-        - run: flatpak update # no clue why libreoffice wont install currently, maybe linked to the fedora-testing repo still being present
-        # so later remove it since it dont think this will fix anything.
   applications:
     source: yafti.screen.package
     values:
@@ -38,7 +35,6 @@ screens:
             - Main Browser: io.gitlab.librewolf-community
             - Youtube: io.freetubeapp.FreeTube
             - Video Editor: org.kde.kdenlive
-            - Libre Office: org.libreoffice.LibreOffice
             - Signal Messenger: org.signal.Signal
             - Video Player: org.videolan.VLC
             - Flatpak Permission Manager: com.github.tchx84.Flatseal
@@ -61,6 +57,7 @@ screens:
             - Session: network.loki.Session
             - VScodium: com.vscodium.codium
             - Video Downloader: io.github.aandrew_me.ytdn
+            - Office: org.libreoffice.LibreOffice
         Core:
           description: Core Applications
           default: false
