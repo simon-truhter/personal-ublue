@@ -61,6 +61,7 @@ screens:
             - VScodium: com.vscodium.codium
             - Video Downloader: io.github.aandrew_me.ytdn
             - Office: org.libreoffice.LibreOffice
+            - Texmaker: net.xm1math.Texmaker
         Core:
           description: Core Applications
           default: false

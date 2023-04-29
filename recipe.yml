@@ -19,6 +19,7 @@ scripts:
   - setup-libvirt.sh
   - setup-zsh.sh
   - setup-extensions.sh
+  - setup-themes.sh
 # a list of urls of .repo files that should be added to your system
 # this is the proper way to add copr repos to your image
 extrarepos:
@@ -43,6 +44,7 @@ rpms:
   - gnome-tweaks # advanced UI Theming
   - gnome-text-editor # Notepad++ for Linux
   - exa # modern ls replacement used via alias in .zshrc
+#  - texmaker
 # add your own below
 # These Flatpaks (from flathub) will be available for install on boot
 # this is just an example selection.

@@ -1,4 +1,5 @@
-USER=$(cat /etc/passwd | sed -n '2p' | cut -d':' -f1)
+# i dont think this will work since the home folder and user related stuff needs to be processed by one of the post install scripts
+USER=user #$(cat /etc/passwd | sed -n '2p' | cut -d':' -f1)
 mkdir -p /home/$USER/.local/zsh/
 touch /home/$USER/.local/zsh/history
 chown $USER:$USER -R  /home/$USER/.local/zsh/
