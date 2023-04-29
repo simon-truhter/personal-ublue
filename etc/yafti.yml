@@ -14,15 +14,6 @@ screens:
     values:
       title: Welcome, Traveler
       condition:
-        run: gnome-extensions disable background-logo@fedorahosted.org
-        run: echo "man either pull the zsh setup script from git or better use the script to bake it into the os"
-        run: gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
-        run: gnome-extensions enable custom-accent-colors@pantheon.io
-        run: gnome-extensions enable soft-brightness-plus@joelkitching.com # make it later all optional
-        run: sudo usermod -aG libvirt $(whoami) # later split into different screen sections
-        run: gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-        run: gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
-        run: gsettings set org.gnome.desktop.interface icon-theme 'Beautyline'
         run: flatpak remotes --system | grep fedora
       description: |
         WARNING: This will modify your Flatpaks if you are rebasing! If you do not want to do this exit the installer.
@@ -30,6 +21,16 @@ screens:
         - run: flatpak remote-delete fedora --force
         - run: flatpak remove --system --noninteractive --all
         - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
+        - run: gnome-extensions disable background-logo@fedorahosted.org
+       # - run: echo "man either pull the zsh setup script from git or better use the script to bake it into the os"
+        - run: gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
+        - run: gnome-extensions enable custom-accent-colors@pantheon.io
+        - run: gnome-extensions enable soft-brightness-plus@joelkitching.com # make it later all optional
+        - run: sudo usermod -aG libvirt $(whoami) # later split into different screen sections
+        - run: gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+        - run: gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+        - run: gsettings set org.gnome.desktop.interface icon-theme 'Beautyline'
+
   applications:
     source: yafti.screen.package
     values:

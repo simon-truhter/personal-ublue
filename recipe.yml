@@ -37,7 +37,7 @@ rpms:
   - qemu-kvm
   - neofetch # zoomer brag and quick sysinfo
   - zsh # advanced shell - customization in script/setup-zsh.sh
-  - openssl # check if its not preinstalled anyway - maybe bad for security if >
+  - openssl # check if its not preinstalled anyway
   - ansible # automate setup scripts
   - kubernetes # kubectl, kubeadm etc 
   - gnome-extensions-app # Add more features to GNOME with extensions
