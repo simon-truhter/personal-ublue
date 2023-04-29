@@ -18,14 +18,15 @@ screens:
       description: |
         WARNING: This will modify your Flatpaks if you are rebasing! If you do not want to do this exit the installer.
       actions:
+        - run: echo "Dont worry, it does not show progress for a while"
         - run: flatpak remote-delete fedora --force
         - run: flatpak remove --system --noninteractive --all
         - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
         - run: gnome-extensions disable background-logo@fedorahosted.org
        # - run: echo "man either pull the zsh setup script from git or better use the script to bake it into the os"
-        - run: gnome-extensions install /usr/share/gnome-shell/extensions/appindicatorsupportrgcjonas.gmail.com.v53.shell-extension.zip
-        - run: gnome-extensions install /usr/share/gnome-shell/extensions/custom-accent-colorsdemiskp.v6.shell-extension.zip
-        - run: gnome-extensions install /usr/share/gnome-shell/extensions/soft-brightness-plusjoelkitching.com.v1.shell-extension.zip
+#        - run: gnome-extensions install /usr/share/gnome-shell/extensions/appindicatorsupportrgcjonas.gmail.com.v53.shell-extension.zip
+#        - run: gnome-extensions install /usr/share/gnome-shell/extensions/custom-accent-colorsdemiskp.v6.shell-extension.zip
+# works but than enable does not work until next login        - run: gnome-extensions install /usr/share/gnome-shell/extensions/soft-brightness-plusjoelkitching.com.v1.shell-extension.zip
         - run: gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
         - run: gnome-extensions enable custom-accent-colors@pantheon.io
         - run: gnome-extensions enable soft-brightness-plus@joelkitching.com # make it later all optional
