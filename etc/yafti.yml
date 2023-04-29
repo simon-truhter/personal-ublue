@@ -14,6 +14,9 @@ screens:
     values:
       title: Welcome, Traveler
       condition:
+        run: gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+        run: gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+        run: gsettings set org.gnome.desktop.interface icon-theme 'Beautyline'
         run: flatpak remotes --system | grep fedora
       description: |
         WARNING: This will modify your Flatpaks if you are rebasing! If you do not want to do this exit the installer.
