@@ -27,9 +27,9 @@ screens:
 #        - run: gnome-extensions install /usr/share/gnome-shell/extensions/appindicatorsupportrgcjonas.gmail.com.v53.shell-extension.zip
 #        - run: gnome-extensions install /usr/share/gnome-shell/extensions/custom-accent-colorsdemiskp.v6.shell-extension.zip
 # works but than enable does not work until next login        - run: gnome-extensions install /usr/share/gnome-shell/extensions/soft-brightness-plusjoelkitching.com.v1.shell-extension.zip
-        - run: gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
-        - run: gnome-extensions enable custom-accent-colors@pantheon.io
-        - run: gnome-extensions enable soft-brightness-plus@joelkitching.com # make it later all optional
+#        - run: gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
+#        - run: gnome-extensions enable custom-accent-colors@pantheon.io
+#        - run: gnome-extensions enable soft-brightness-plus@joelkitching.com # make it later all optional
         - run: sudo usermod -aG libvirt $(whoami) # later split into different screen sections
         - run: gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
         - run: gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
