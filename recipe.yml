@@ -18,6 +18,7 @@ description: A starting point for further customization of uBlue images. Make yo
 scripts:
 #  - setup-libvirt.sh
 #  - setup-zsh.sh # todo add zsh setup script to the image which later is called by yafti
+  - silverblue-nix-installer.sh #todo remove the github dependencies, bake it all into one script
   - download-extensions.sh
   - download-themes.sh # pulls icon pack from gitlab
 # a list of urls of .repo files that should be added to your system
