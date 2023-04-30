@@ -42,7 +42,7 @@ rpms:
   - kubernetes # kubectl, kubeadm etc 
   - gnome-extensions-app # Add more features to GNOME with extensions
   - gnome-tweaks # advanced UI Theming
-  - gnome-text-editor # Notepad++ for Linux
+#  - gnome-text-editor # Notepad++ for Linux
   - exa # modern ls replacement used via alias in .zshrc
   - gnome-calendar # added i dont know if integration with online accounts would word need to check on that!!!!!!!!!!
   - gnome-online-accounts # this does not exist as flatpak
