@@ -89,18 +89,79 @@ sleep 1
 
 echo "Making a nix backup"
 
-bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/backup-scripts/create-backup-selinux.sh)
+sudo mkdir /opt/nb
+sudo cp -R /nix /opt/nb
+
+sudo tee /opt/nb/reset-nix <<EOF
+#!/bin/bash
+sudo echo "Resetting nix..."
+sudo rm -rf /nix/*
+sudo mkdir -p /nix
+sudo cp -R /opt/nb/nix/* /nix/
+sudo restorecon -RF /nix
+sudo echo "Nix has been resetted. Reboot for changes to apply."
+EOF
+
+sudo chmod a+x /opt/nb/reset-nix
+
+sudo echo "Finished installing nix backup"
 
 sleep 1
 
-bash <(curl -s https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/other-scripts/nix-linker.sh)
+sudo echo "Deleting existing files that have the same name if /usr/local/bin (if you have any)"
+
+sleep 1
+
+sudo rm -f /usr/local/bin/nix
+sudo rm -f /usr/local/bin/nix-build
+sudo rm -f /usr/local/bin/nix-channel
+sudo rm -f /usr/local/bin/nix-collect-garbage
+sudo rm -f /usr/local/bin/nix-copy-closure
+sudo rm -f /usr/local/bin/nix-daemon
+sudo rm -f /usr/local/bin/nix-env
+sudo rm -f /usr/local/bin/nix-hash
+sudo rm -f /usr/local/bin/nix-instantiate
+sudo rm -f /usr/local/bin/nix-prefetch-url
+sudo rm -f /usr/local/bin/nix-shell
+sudo rm -f /usr/local/bin/nix-store
+
+sudo echo "Now creating symlinks from /nix/var/nix/profiles/default/bin to /usr/local/bin"
+
+sleep 1
+
+sudo ln -s /nix/var/nix/profiles/default/bin/nix /usr/local/bin
+sudo ln -s /nix/var/nix/profiles/default/bin/nix-build /usr/local/bin
+sudo ln -s /nix/var/nix/profiles/default/bin/nix-channel /usr/local/bin
+sudo ln -s /nix/var/nix/profiles/default/bin/nix-collect-garbage /usr/local/bin
+sudo ln -s /nix/var/nix/profiles/default/bin/nix-copy-closure /usr/local/bin
+sudo ln -s /nix/var/nix/profiles/default/bin/nix-daemon /usr/local/bin
+sudo ln -s /nix/var/nix/profiles/default/bin/nix-env /usr/local/bin
+sudo ln -s /nix/var/nix/profiles/default/bin/nix-hash /usr/local/bin
+sudo ln -s /nix/var/nix/profiles/default/bin/nix-instantiate /usr/local/bin
+sudo ln -s /nix/var/nix/profiles/default/bin/nix-prefetch-url /usr/local/bin
+sudo ln -s /nix/var/nix/profiles/default/bin/nix-shell /usr/local/bin
+sudo ln -s /nix/var/nix/profiles/default/bin/nix-store /usr/local/bin
+
+sudo echo "Finished linking"
+
 
 echo "Modifying configurations"
 
 sleep 1
 
-sudo rm -f /etc/nix/nix.conf ; sudo wget -P /etc/nix https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/other-files/nix.conf
-sudo rm -f /etc/profile.d/nix-app-icons.sh ; sudo wget -P /etc/profile.d https://raw.githubusercontent.com/dnkmmr69420/nix-installer-scripts/main/other-files/nix-app-icons.sh
+sudo rm -f /etc/nix/nix.conf 
+
+
+sudo tee /etc/nix/nix.conf <<EOF
+experimental-features = nix-command flakes
+build-users-group = nixbld
+EOF
+
+sudo rm -f /etc/profile.d/nix-app-icons.sh 
+
+sudo tee /etc/profile.d/nix-app-icons.sh <<EOF
+XDG_DATA_DIRS="$HOME/.nix-profile/share:/nix/var/nix/profiles/default/share:$XDG_DATA_DIRS"
+EOF
 
 sleep 1
 
