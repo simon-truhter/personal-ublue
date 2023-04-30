@@ -30,8 +30,8 @@ screens:
 #        - run: gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
 #        - run: gnome-extensions enable custom-accent-colors@pantheon.io
 #        - run: gnome-extensions enable soft-brightness-plus@joelkitching.com # make it later all optional
-	- run: sudo bash /usr/bin/ublue-nix-install # still try
-        - run: sudo usermod -aG libvirt $(whoami) # later split into different screen sections
+	#- run: sudo bash /usr/bin/ublue-nix-install # still try
+       # - run: sudo usermod -aG libvirt $(whoami) # later split into different screen sections
         - run: gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark' # sudo command does not seem to work
         - run: gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
         - run: gsettings set org.gnome.desktop.interface icon-theme 'beautyline'
